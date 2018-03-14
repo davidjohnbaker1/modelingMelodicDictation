@@ -5,10 +5,8 @@ Everything you need here for the ICMPC paper and poster.
 
 ## Work Docket
 
-* Migrate experimental draft to this repo
 * Program in all surveys needed
 * Write section on melody selection
-* Figure out fancy way to have melodies loaded
 * Begin outline for experimental protocol 
 * Get overleaf template and include link and bash line to open it
 
@@ -28,4 +26,10 @@ Everything you need here for the ICMPC paper and poster.
 ## Work Log
  
 * Created timeline and repo 2018-03-14; DB
-* 30 minute pomodoro, migrated experiment to repo, one reference; DB
+* 30 minute pomodoro, migrated experiment to repo,read jspsych on fancy timeline, one reference; DB
+* 20 minute figured out how to string audio files together, began to build main loop; DB
+
+## Stuff I said I would do then did
+
+* Migrate experimental draft to this repo
+* Figure out fancy way to have melodies loaded

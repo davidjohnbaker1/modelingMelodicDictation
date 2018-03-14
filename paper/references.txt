@@ -1,0 +1,15 @@
+## Here I put all the APA references
+
+Colley, I. D., Keller, P. E., & Halpern, A. R. (2017). Working Memory and Auditory Imagery Predict Sensorimotor Synchronization with Expressively Timed Music. The Quarterly Journal of Experimental Psychology, 1-49.
+
+Halpern, A. R., & Bartlett, J. C. (2010). Memory for melodies. In Music perception (pp. 233-258). Springer New York.
+
+Karpinski, G. S. (2007). Manual for ear training and sight singing. Norton.
+
+Müllensiefen, D. (2009). Fantastic: Feature ANalysis Technology Accessing Statistics (In a Corpus): Technical report v1. Goldsmiths University of London.
+
+Müllensiefen, D., Gingras, B., Musil, J., & Stewart, L. (2014). The musicality of non-musicians: an index for assessing musical sophistication in the general population. PloS one, 9(2), e89642.
+
+Müllensiefen, D., & Halpern, A. R. (2014). The role of features and context in recognition of novel melodies. Music Perception: An Interdisciplinary Journal, 31(5), 418-435.
+
+

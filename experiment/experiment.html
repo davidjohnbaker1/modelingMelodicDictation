@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="jspsych.js"></script>
+    <script src="plugins/jspsych.js"></script>
     <script src="plugins/jspsych-survey-likert.js"></script>
     <script src="plugins/jspsych-audio-button-response.js"></script>
     <script src="plugins/jspsych-instructions.js"></script>
@@ -96,7 +96,71 @@ var mainaudio1 = {
 	randomize_order : true
 };
 
-timeline.push(mainaudio1)
+//timeline.push(mainaudio1)
+
+// What if you have two in one???
+
+var mainaudio2 = {
+
+    timeline: [
+// FIRST REPITITION, ADD TRANSCRIBE TIME ON ALL OF THESE
+
+
+// Silence
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/hammer.mp3',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'SILENCE'
+          },
+
+// Melody Plays
+
+	{
+	    	type: 'audio-button-response',
+   	     	stimulus: jsPsych.timelineVariable('melody'),
+    	     	choices: ['FIRST SOUNDING'],
+		trial_ends_after_audio: true ,
+		prompt: '<p> This is the default prompt</p>'
+           },
+
+// Transcription Time
+
+	{
+	    	type: 'audio-button-response',
+   	     	stimulus: jsPsych.timelineVariable('melody'),
+    	     	choices: ['FIRST SOUNDING'],
+		trial_ends_after_audio: true ,
+		prompt: '<p> This is the default prompt</p>'
+           },
+
+// SECOND REPITION
+ {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/hammer.mp3',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true 
+          },
+	{
+	    	type: 'audio-button-response',
+   	     	stimulus: jsPsych.timelineVariable('melody'),
+    	     	choices: ['SECOND SOUNDING'],
+		prompt: '<p> This is the default prompt</p>'
+           }
+
+            ],
+    timeline_variables: [
+        { melody: 'sound/speech_red.mp3', prompt: '<p>Please swap to melody REDX</p>'},
+	{ melody: 'sound/speech_blue.mp3', prompt: '<p>Please swap to melody BLUEX</p>'},
+	{ melody: 'sound/speech_green.mp3', prompt: '<p>Please swap to melody GREENX</p>'},
+	{ melody: 'sound/hammer.mp3', prompt: '<p>Please swap to melody hammer</p>'}
+    ],
+	randomize_order : true
+};
+
+timeline.push(mainaudio2)
+
 
 //stimulus: 'sound/speech_green.mp3',
 // END HERE////////////////////////////
