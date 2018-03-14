@@ -10,6 +10,7 @@ Everything you need here for the ICMPC paper and poster.
 * Write section on melody selection
 * Figure out fancy way to have melodies loaded
 * Begin outline for experimental protocol 
+* Get overleaf template and include link and bash line to open it
 
 ## Looming Deadlines
 
