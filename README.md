@@ -28,3 +28,4 @@ Everything you need here for the ICMPC paper and poster.
 ## Work Log
  
 * Created timeline and repo 2018-03-14; DB
+* 30 minute pomodoro, migrated experiment to repo, one reference; DB
