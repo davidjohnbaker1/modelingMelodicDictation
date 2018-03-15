@@ -28,6 +28,7 @@ Everything you need here for the ICMPC paper and poster.
 * Created timeline and repo 2018-03-14; DB
 * 30 minute pomodoro, migrated experiment to repo,read jspsych on fancy timeline, one reference; DB
 * 20 minute figured out how to string audio files together, began to build main loop; DB
+* 120 minute coded main loop 2018-03-15; DB
 
 ## Stuff I said I would do then did
 
