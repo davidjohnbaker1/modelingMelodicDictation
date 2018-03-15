@@ -468,7 +468,7 @@ function saveData(name, data){
   jsPsych.init({
     timeline: timeline,
     preload_audio: audiopaths,
-    on_finish: function(){ jsPsych.data.get().localSave('csv', subject_id + '.csv');}  
+    on_finish: function(){ jsPsych.data.get().localSave('csv', subject_id + '.csv'); }  
 
 });
 
