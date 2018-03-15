@@ -16,8 +16,32 @@ var scale = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agre
 
 // Preloading
 
-//var audiopaths = ['sound/Mary5x.mp3','sound/PDeck5x.mp3','sound/PDoremei5x.mp3','sound/PJingle5x.mp3','sound/YankeeDaddy5x.mp3'];
-var audiopaths = ['sound/speech_red.mp3','sound/speech_green.mp3','sound/speech_blue.mp3'];
+var audiopaths = [	 	
+			// Place Holders
+	
+			'sound/hammer.mp3',
+
+			// Melodies
+
+			'sound/mp3/yankee.mp3',
+			'sound/mp3/setupYankee.mp3',
+		
+			// Silences
+
+			'sound/mp3/fiveSecondSilence.wav',
+			'sound/mp3/tenSecondSilence.wav',
+			'sound/mp3/twentySecondSilence.wav',
+
+			// Cadence Set Ups
+		
+			'sound/mp3/G Major Set Up.mp3',
+
+			// Triangles
+
+			'sound/mp3/DoubleTriangle.mp3',
+			'sound/mp3/Triangle.mp3'
+
+		];
 
 // Timeline Loop
 
@@ -37,10 +61,9 @@ timeline.push(welcome)
 
 // Audio At Comfortable Level
 
-
 var audiocomfort={
     type: 'audio-button-response',
-    stimulus: 'sound/speech_blue.mp3',
+    stimulus: 'sound/mp3/yankee.mp3',
     choices: ['NEXT'],
     prompt: "<p>Please adjust the volume HERE to a comfortable level.</p>"
   };
@@ -60,110 +83,226 @@ var maininstructions ={
 
 timeline.push(maininstructions)
 
-// Enter Main Melody Looooop 
-
-//var mainaudio={
-//    type: 'audio-button-response',
-//    stimulus: 'sound/speech_green.mp3',
-//    choices: ['Green', 'Blue', 'Red'],
-//    prompt: "<p>After the last hearing of the melody ( </p>"
-//  };
-//
-//
-//timeline.push(mainaudio)
-
-// SKETCH HERE/////////////////////////
-
-// OR COULD JUST ADD TRACK TO AUDIO FILE SAYING WHAT IS GOINT TO BE PLAYED!!!
-
-var mainaudio1 = {
-
-    timeline: [
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-    	     	choices: ['Not Difficult','Somewhat Difficult','Very Difficult'],
-		prompt: '<p> This is the default prompt</p>'
-           }
-
-            ],
-    timeline_variables: [
-        { melody: 'sound/speech_red.mp3', prompt: '<p>Please swap to melody REDX</p>'},
-	{ melody: 'sound/speech_blue.mp3', prompt: '<p>Please swap to melody BLUEX</p>'},
-	{ melody: 'sound/speech_green.mp3', prompt: '<p>Please swap to melody GREENX</p>'},
-	{ melody: 'sound/hammer.mp3', prompt: '<p>Please swap to melody hammer</p>'}
-    ],
-	randomize_order : true
-};
-
-//timeline.push(mainaudio1)
-
-// What if you have two in one???
-
 var mainaudio2 = {
 
     timeline: [
-// FIRST REPITITION, ADD TRANSCRIBE TIME ON ALL OF THESE
 
+// MAIN LOOP  
 
-// Silence
+/// SET UP 
         {
 	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/hammer.mp3',
-		choices: ['LISTEN'],
+   	     	stimulus: 'sound/mp3/fiveSecondSilence.wav',
+		choices: ['CLICK WHEN READY TO BEGIN'],
+		prompt: function(){ return "Please flip to the page with melody "+jsPsych.timelineVariable('melody', true); } 
+      },
+
+// FIRST REP
+
+// Triangle 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/Triangle.mp3',
+		choices: ['READY!?'],
 		trial_ends_after_audio: true ,
-		prompt: 'SILENCE'
+		prompt: 'First Hearing'
           },
 
-// Melody Plays
 
-	{
+// Set Up AND Melody 
+
+        {
 	    	type: 'audio-button-response',
    	     	stimulus: jsPsych.timelineVariable('melody'),
-    	     	choices: ['FIRST SOUNDING'],
-		trial_ends_after_audio: true ,
-		prompt: '<p> This is the default prompt</p>'
-           },
-
-// Transcription Time
-
-	{
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-    	     	choices: ['FIRST SOUNDING'],
-		trial_ends_after_audio: true ,
-		prompt: '<p> This is the default prompt</p>'
-           },
-
-// SECOND REPITION
- {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/hammer.mp3',
 		choices: ['LISTEN'],
 		trial_ends_after_audio: true 
           },
-	{
+
+// Silence for Transcribing
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
+          },
+
+// REP TWO 
+
+// Triangle 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/Triangle.mp3',
+		choices: ['READY!?'],
+		trial_ends_after_audio: true ,
+		prompt: 'Second Hearing'
+          },
+
+
+// Set Up AND Melody 
+
+        {
 	    	type: 'audio-button-response',
    	     	stimulus: jsPsych.timelineVariable('melody'),
-    	     	choices: ['SECOND SOUNDING'],
-		prompt: '<p> This is the default prompt</p>'
-           }
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true 
+          },
+
+// Silence for Transcribing
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
+          },
+
+
+
+// REP THREE
+
+// Triangle 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/Triangle.mp3',
+		choices: ['READY!?'],
+		trial_ends_after_audio: true ,
+		prompt: 'Third Hearing'
+          },
+
+
+// Set Up AND Melody 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: jsPsych.timelineVariable('melody'),
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true 
+          },
+
+// Silence for Transcribing
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
+          },
+
+
+// REP FOUR
+
+// Triangle 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/Triangle.mp3',
+		choices: ['READY!?'],
+		trial_ends_after_audio: true ,
+		prompt: 'Fourth Hearing'
+          },
+
+
+// Set Up AND Melody 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: jsPsych.timelineVariable('melody'),
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true 
+          },
+
+// Silence for Transcribing
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
+          },
+
+
+
+// REP FIVE (DOUBLE TRIANGLE, END SEQUENCE)
+
+// Triangle 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/DoubleTriangle.mp3',
+		choices: ['READY!?'],
+		trial_ends_after_audio: true ,
+		prompt: 'Fifth and Final Hearing'
+          },
+
+
+// Set Up AND Melody 
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: jsPsych.timelineVariable('melody'),
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true 
+          },
+
+// Silence for Transcribing
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
+          },
+
+// Turn In Sheet to Experimenter
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/DoubleTriangle.mp3',
+		choices: ['STOP'],
+		trial_ends_after_audio: true ,
+		prompt: 'PLEASE PUT DOWN YOUR PENCIL'
+          },
+
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/DoubleTriangle.mp3',
+		choices: ['STOP'],
+		trial_ends_after_audio: true ,
+		prompt: 'PLEASE PUT DOWN YOUR PENCIL'
+          },
+
+
+        {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['CONTINUE'],
+		prompt: 'PLEASE GIVE YOUR DICTATION TO THE EXPERIMENTER, WHEN YOU ARE READY TO START THE NEXT MELODY PLEASE PRESS THE BUTTON ABOVE'
+          }
+
+
 
             ],
+
+// DECLARE Melodies Used in Loop
+// ( eventually have it so set number of times of melody? //
+
     timeline_variables: [
-        { melody: 'sound/speech_red.mp3', prompt: '<p>Please swap to melody REDX</p>'},
-	{ melody: 'sound/speech_blue.mp3', prompt: '<p>Please swap to melody BLUEX</p>'},
-	{ melody: 'sound/speech_green.mp3', prompt: '<p>Please swap to melody GREENX</p>'},
-	{ melody: 'sound/hammer.mp3', prompt: '<p>Please swap to melody hammer</p>'}
+        { melody: 'sound/mp3/setupYankee.mp3', prompt: '<p>TEMP HOLDER</p>'},
     ],
 	randomize_order : true
 };
 
 timeline.push(mainaudio2)
-
-
-//stimulus: 'sound/speech_green.mp3',
-// END HERE////////////////////////////
 
 
 // Deomographics 
