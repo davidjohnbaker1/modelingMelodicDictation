@@ -62,8 +62,80 @@ var subject_id = prompt("Enter Participant Number");
                           subject: subject_id,
                 });
 
-//// SKETCH AREA
 
+//////////////////////////////////////////////////
+// Welcome, Consent Form, Materials Check 
+/////////////////////////////////////////////////
+
+var welcome= {
+    type: 'instructions',
+    pages: ['<p align="justify">Welcome to this experiment on melodic dictation!</p><p>Please click the button below to begin!</p>',
+      '<p align="justify">This study is examining factors that might contribute to an individual&#39;s ability to dictate musical material. This experiment will take place in two parts. The first part requires listening to various melodies played through a speaker in a classroom setting and attempting dictate what is heard.  After completing the first part of the experiment, you will be asked to come back into the lab to fill out a selection of surveys thought to contribute to processes involved in musical dictation such as your musical sophistication, your memory, and your ability to imagine musical tones. Subjects may choose not to participate or to withdraw from the study at any time without penalty or loss of any benefit to which they might otherwise be entitled. All data will be made anonymous, and all efforts will be made to keep possible identifying data private and secure. This study has been approved by the LSU IRB. For questions concerning participant rights, please contact the IRB Chair, Dr. Dennis Landin, 578-8692, or irb@lsu.edu. The Primary Investigator is Dr. Daniel Shanahan, who can be contacted at dshanahan@lsu.edu with any questions or concerns you might have. The co-investigator is David Baker (dbake29@lsu.edu). </p><p>If you are willing to partake in this experiment, please sign the form in front of you, pass it to the experimenter, then click the next button below</p>',
+      '<p align="justify">This experiment is meant to reproduce what a melodic dictation in an Aural Skills classroom would be like in a controlled setting. Please note that at this point you should have both staff paper as well as a pencil on your desk which you will use for the experiment. If you do not have either or both staff paper and a pencil, please let the experimenter know now. Put phones away at this time. </p>','<p align="justify">Please put the headphones on next to you. On the next screen you will hear a melody. Please adjust the volume to a comfortable volume as the melody plays. If the volume level is satisfactory, just enjoy the melody!</p>'],
+    show_clickable_nav: true
+  };
+
+timeline.push(welcome)
+
+// Audio At Comfortable Level
+
+var audiocomfort={
+    type: 'audio-button-response',
+    stimulus: 'sound/mp3/yankee.mp3',
+    choices: ['NEXT'],
+    prompt: "<p>Please adjust the volume HERE to a comfortable level.</p>"
+  };
+
+timeline.push(audiocomfort)
+
+// Instructions for Experiment
+
+// ADD IN BIT HERE ABOUT TIME TO FLIP TO CORRECT PAGE
+
+var maininstructions ={
+    type: 'instructions',
+    pages: ['<p align="justify">For this experiment you will perform FIVE melodic dictations on relatively short melodies.</p><p align="justify">Each melody will be played FIVE times. Prior to hearing each melody, the key will be established via a I &mdash; IV &mdash; I &mdash; V7 &mdash; I progression. Once the key is established, you will hear a two bars for nothing played by a clave. For example, if the melody is in 4/4 time,  you will hear eight clave clicks representing four quarter notes and then  the melody will begin to play. The times signature, mode, and key signature of each melody is provided on your paper. After each melody is played you will have 30 seconds before the next hearing. A triangle sound will play before every hearing. Before the final hearing of the melody the triangle will be played twice. After the last hearing of the melody, you will have two minutes to make any needed corrections to your paper.</p>','<p align="justify">PUT SOMETHING IN ABOUT HERE ABOUT FLIPPING TO THE RIGHT MELODY.</p><p align="justify"> A THIS SOUND WILL PLAY WHEN THE NEW MELODY IS ABOUT TO START. It is very important that once you have moved on to the next melody that you do not correct any previous melodies. Changes outside of the allotted time will corrupt any data we are trying to collect. If you understand this, press next.</p>',
+      '<p align="justify">The your dication will be graded in two parts. Half of the grade will come from having the correct rhythms in the correct places. For example, if the first bar is all eight-notes, and you write that, you would get half points for that bar. The other half of the possible points for the bar will come from identifying the correct scale degrees with the rhythm. Note that you will NOT be given the starting pitch and should infer it from the cadence.</p><p align="justify">After the last dictation you will be asked to use the blank piece of non-staff paper given to you to write down strategies you used during the experiment.</p>','<p align="justify">To review, you will hear each melody FIVE times. Please do your best to dictate it as you would in an aural skills classroom setting noting with each hearing how confident you were with your answer at that point.</p><p align="justify">If there are any questions at this point, please ask the experimenter. If not, the experiment will begin. Please ask any questions the experimenter now. When you are ready to begin the experiment, please press NEXT!</p>' ],
+    show_clickable_nav: true
+  };
+
+timeline.push(maininstructions)
+
+</script>
+<script src="mainloop.js"></script>
+
+<script>
+// Add in thing here about break and now going to fill out demographics
+
+// Deomographics 
+/// Aural Skills
+///// Make sure to have recency item
+///// AP question
+/// Goldsmiths 
+
+
+/// Aural Skills Questions
+
+var aural={
+    type: 'instructions',
+    pages: ['Welcome to the experiment on melodic dictation. On this screen I will tell the participans that I really appreciate what they are doing here and that they need to Click next to begin.',
+      'On this page I am going to put the consent form. They will read it on here and note that the click will indicate some sort of conset and that they should also sign the hard copy that is in front of them (experimenter needs to then put that into the binder.',
+      'With that out of the way, next thing is to make sure that you have a pencil, staff paper, and that your headphones are set to a confortable volume'],
+    show_clickable_nav: true
+  };
+
+timeline.push(aural)
+
+/// Gold MSI
+
+var goldmsi={
+      type: 'survey-likert',
+      questions: [{prompt: "I like vegetables.", labels: scale, required: true}, {prompt: "I like fruit.", labels: scale, required: true}],
+  };
+
+timeline.push(goldmsi)
+
+/// Bucknell Auditory Imagery Scale
 
 var introBucknell= {
     type: 'instructions',
@@ -121,338 +193,6 @@ var bucknellC={
 
 timeline.push(bucknellC)
 
-////
-
-//////////////////////////////////////////////////
-// Welcome, Consent Form, Materials Check 
-
-var welcome= {
-    type: 'instructions',
-    pages: ['<p align="justify">Welcome to this experiment on melodic dictation!</p><p>Please click the button below to begin!</p>',
-      '<p align="justify">This study is examining factors that might contribute to an individual&#39;s ability to dictate musical material. This experiment will take place in two parts. The first part requires listening to various melodies played through a speaker in a classroom setting and attempting dictate what is heard.  After completing the first part of the experiment, you will be asked to come back into the lab to fill out a selection of surveys thought to contribute to processes involved in musical dictation such as your musical sophistication, your memory, and your ability to imagine musical tones. Subjects may choose not to participate or to withdraw from the study at any time without penalty or loss of any benefit to which they might otherwise be entitled. All data will be made anonymous, and all efforts will be made to keep possible identifying data private and secure. This study has been approved by the LSU IRB. For questions concerning participant rights, please contact the IRB Chair, Dr. Dennis Landin, 578-8692, or irb@lsu.edu. The Primary Investigator is Dr. Daniel Shanahan, who can be contacted at dshanahan@lsu.edu with any questions or concerns you might have. The co-investigator is David Baker (dbake29@lsu.edu). </p><p>If you are willing to partake in this experiment, please sign the form in front of you, pass it to the experimenter, then click the next button below</p>',
-      '<p align="justify">This experiment is meant to reproduce what a melodic dictation in an Aural Skills classroom would be like in a controlled setting. Please note that at this point you should have both staff paper as well as a pencil on your desk which you will use for the experiment. If you do not have either or both staff paper and a pencil, please let the experimenter know now. Put phones away at this time. </p>','<p align="justify">Please put the headphones on next to you. On the next screen you will hear a melody. Please adjust the volume to a comfortable volume as the melody plays. If the volume level is satisfactory, just enjoy the melody!</p>'],
-    show_clickable_nav: true
-  };
-
-timeline.push(welcome)
-
-// Audio At Comfortable Level
-
-var audiocomfort={
-    type: 'audio-button-response',
-    stimulus: 'sound/mp3/yankee.mp3',
-    choices: ['NEXT'],
-    prompt: "<p>Please adjust the volume HERE to a comfortable level.</p>"
-  };
-
-timeline.push(audiocomfort)
-
-// Instructions for Experiment
-
-// ADD IN BIT HERE ABOUT TIME TO FLIP TO CORRECT PAGE
-
-var maininstructions ={
-    type: 'instructions',
-    pages: ['<p align="justify">For this experiment you will perform FIVE melodic dictations on relatively short melodies.</p><p align="justify">Each melody will be played FIVE times. Prior to hearing each melody, the key will be established via a I &mdash; IV &mdash; I &mdash; V7 &mdash; I progression. Once the key is established, you will hear a two bars for nothing played by a clave. For example, if the melody is in 4/4 time,  you will hear eight clave clicks representing four quarter notes and then  the melody will begin to play. The times signature, mode, and key signature of each melody is provided on your paper. After each melody is played you will have 30 seconds before the next hearing. A triangle sound will play before every hearing. Before the final hearing of the melody the triangle will be played twice. After the last hearing of the melody, you will have two minutes to make any needed corrections to your paper.</p>','<p align="justify">PUT SOMETHING IN ABOUT HERE ABOUT FLIPPING TO THE RIGHT MELODY.</p><p align="justify"> A THIS SOUND WILL PLAY WHEN THE NEW MELODY IS ABOUT TO START. It is very important that once you have moved on to the next melody that you do not correct any previous melodies. Changes outside of the allotted time will corrupt any data we are trying to collect. If you understand this, press next.</p>',
-      '<p align="justify">The your dication will be graded in two parts. Half of the grade will come from having the correct rhythms in the correct places. For example, if the first bar is all eight-notes, and you write that, you would get half points for that bar. The other half of the possible points for the bar will come from identifying the correct scale degrees with the rhythm. Note that you will NOT be given the starting pitch and should infer it from the cadence.</p><p align="justify">After the last dictation you will be asked to use the blank piece of non-staff paper given to you to write down strategies you used during the experiment.</p>','<p align="justify">To review, you will hear each melody FIVE times. Please do your best to dictate it as you would in an aural skills classroom setting noting with each hearing how confident you were with your answer at that point.</p><p align="justify">If there are any questions at this point, please ask the experimenter. If not, the experiment will begin. Please ask any questions the experimenter now. When you are ready to begin the experiment, please press NEXT!</p>' ],
-    show_clickable_nav: true
-  };
-
-timeline.push(maininstructions)
-
-var mainaudio2 = {
-
-    timeline: [
-
-// MAIN LOOP  
-
-/// SET UP 
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/fiveSecondSilence.wav',
-		choices: ['CLICK WHEN READY TO BEGIN'],
-		prompt: function(){ return "Please flip to the page with melody "+jsPsych.timelineVariable('melody', true); } 
-      },
-
-// FIRST REP
-
-// Triangle 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/Triangle.mp3',
-		choices: ['READY!?'],
-		trial_ends_after_audio: true ,
-		prompt: 'First Hearing'
-          },
-
-
-// Set Up AND Melody 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true 
-          },
-
-// Silence for Transcribing
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true ,
-		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
-          },
-
-// REP TWO 
-
-// Triangle 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/Triangle.mp3',
-		choices: ['READY!?'],
-		trial_ends_after_audio: true ,
-		prompt: 'Second Hearing'
-          },
-
-
-// Set Up AND Melody 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true 
-          },
-
-// Silence for Transcribing
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true ,
-		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
-          },
-
-
-
-// REP THREE
-
-// Triangle 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/Triangle.mp3',
-		choices: ['READY!?'],
-		trial_ends_after_audio: true ,
-		prompt: 'Third Hearing'
-          },
-
-
-// Set Up AND Melody 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true 
-          },
-
-// Silence for Transcribing
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true ,
-		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
-          },
-
-
-// REP FOUR
-
-// Triangle 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/Triangle.mp3',
-		choices: ['READY!?'],
-		trial_ends_after_audio: true ,
-		prompt: 'Fourth Hearing'
-          },
-
-
-// Set Up AND Melody 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true 
-          },
-
-// Silence for Transcribing
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true ,
-		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
-          },
-
-
-
-// REP FIVE (DOUBLE TRIANGLE, END SEQUENCE)
-
-// Triangle 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/DoubleTriangle.mp3',
-		choices: ['READY!?'],
-		trial_ends_after_audio: true ,
-		prompt: 'Fifth and Final Hearing'
-          },
-
-
-// Set Up AND Melody 
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: jsPsych.timelineVariable('melody'),
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true 
-          },
-
-// Silence for Transcribing
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
-		choices: ['LISTEN'],
-		trial_ends_after_audio: true ,
-		prompt: 'USE THESE 20 SECONDS TO DICTATE THE MELODY'
-          },
-
-// Turn In Sheet to Experimenter
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/DoubleTriangle.mp3',
-		choices: ['STOP'],
-		trial_ends_after_audio: true ,
-		prompt: 'PLEASE PUT DOWN YOUR PENCIL'
-          },
-
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/DoubleTriangle.mp3',
-		choices: ['STOP'],
-		trial_ends_after_audio: true ,
-		prompt: 'PLEASE PUT DOWN YOUR PENCIL'
-          },
-
-
-        {
-	    	type: 'audio-button-response',
-   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
-		choices: ['CONTINUE'],
-		prompt: 'PLEASE GIVE YOUR DICTATION TO THE EXPERIMENTER, WHEN YOU ARE READY TO START THE NEXT MELODY PLEASE PRESS THE BUTTON ABOVE'
-          }
-
-
-
-            ],
-
-// DECLARE Melodies Used in Loop
-// ( eventually have it so set number of times of melody? //
-
-    timeline_variables: [
-        { melody: 'sound/mp3/setupYankee.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupMary.mp3', prompt: '<p>TEMP</p>'},
-	{ melody: 'sound/mp3/setupDoremi.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupDeck.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupHappy.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupJingle.mp3', prompt: '<p>TEMP HOLDER</p>'}
-    ],
-	randomize_order : true
-
-};
-
-timeline.push(mainaudio2)
-
-// Add in thing here about break and now going to fill out demographics
-
-// Deomographics 
-/// Aural Skills
-///// Make sure to have recency item
-///// AP question
-/// Goldsmiths 
-
-/// Bucknell Auditory Imagery Scale
-
-var bucknellV1={
-      type: 'survey-likert',
-      preamble: 'The following scale is designed to measure auditory imagery, or the way in which you “think about sounds in your head.” For the following items you are asked to do the following: Read the item and consider whether you think of an image of the described sound in your head. Then rate the vividness of your image using the following “Vividness Rating Scale.” If no image is generated, give a rating of 1. Please feel free to use all of the levels in the scale when selecting your ratings.',
-      questions: [	{prompt: "I like sandwiches", labels: scale, required: true}, 
-			{prompt: "I like bagels.", labels: scale, required: true}],
-  };
-
-var bucknellV2={
-      type: 'survey-likert',
-      questions: [{prompt: "I like sandwiches", labels: scale, required: true}, {prompt: "I like bagels.", labels: scale, required: true}],
-  };
-
-var bucknellC1={
-      type: 'survey-likert',
-      questions: [{prompt: "I like sandwiches", labels: scale, required: true}, {prompt: "I like bagels.", labels: scale, required: true}],
-  };
-
-var bucknellC2={
-      type: 'survey-likert',
-      questions: [{prompt: "I like sandwiches", labels: scale, required: true}, {prompt: "I like bagels.", labels: scale, required: true}],
-  };
-
-
-
-timeline.push(bucknell)
-
-
-/// Aural Skills Questions
-
-var aural={
-    type: 'instructions',
-    pages: ['Welcome to the experiment on melodic dictation. On this screen I will tell the participans that I really appreciate what they are doing here and that they need to Click next to begin.',
-      'On this page I am going to put the consent form. They will read it on here and note that the click will indicate some sort of conset and that they should also sign the hard copy that is in front of them (experimenter needs to then put that into the binder.',
-      'With that out of the way, next thing is to make sure that you have a pencil, staff paper, and that your headphones are set to a confortable volume'],
-    show_clickable_nav: true
-  };
-
-timeline.push(aural)
-
-/// Gold MSI
-
-var goldmsi={
-      type: 'survey-likert',
-      questions: [{prompt: "I like vegetables.", labels: scale, required: true}, {prompt: "I like fruit.", labels: scale, required: true}],
-  };
-
-timeline.push(goldmsi)
-
-/// Bucknell Auditory Imagery Scale
-
-var bucknell={
-      type: 'survey-likert',
-      questions: [{prompt: "I like sandwiches", labels: scale, required: true}, {prompt: "I like bagels.", labels: scale, required: true}],
-  };
-
-timeline.push(bucknell)
 
 // SAVE FUNCTION
 
