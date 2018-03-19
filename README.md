@@ -11,7 +11,7 @@ Everything you need here for the ICMPC paper and poster.
 
 ## Looming Deadlines
 
-* [ ] March 16th -- Experiment Draft Coded in jsPsych
+* [X] March 16th -- Experiment Draft Coded in jsPsych
 * [ ] March 23rd -- Outline Written, Team Writes notes over Spring break if they want
 * [ ] March 23rd -- References Sketched
 * [ ] April 4th -- Data Collection Begins
