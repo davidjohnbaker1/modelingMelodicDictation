@@ -1,0 +1,17 @@
+# Analysis and Design
+
+Participants will transcribe four melodies
+
+Exploratory design
+	2x2
+	High - Note Density
+	Low - Note Density
+	High - Contour Variability
+	Low - Contour Variability 
+
+Four melodies, 5x each, 10 seconds between hearings
+not expected to be able to transcribe the whole melody
+
+2x2 ANOVA, expect main effects and interaction term
+
+
