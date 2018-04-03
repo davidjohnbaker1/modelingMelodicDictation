@@ -8,6 +8,13 @@ Everything you need here for the ICMPC paper and poster.
 * Program in all surveys needed
 * Begin outline for experimental protocol 
 * Get overleaf template and include link and bash line to open it
+* Change berkowitz spelling
+* Experiment line to see if they have done this melody before
+* add in R line script that removes current berkowitz before making new corpus
+* Packet with correct key signature
+* You will set up with chords changing at level of beat, then two bars for free
+* Print draft paper for tomorrow
+* Pilot with Rory tomorrow 
 
 ## Looming Deadlines
 
