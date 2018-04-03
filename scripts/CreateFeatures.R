@@ -10,7 +10,8 @@ file.edit("Fantastic.R")
 # NOW SELECT ALL THEN CLICK RUN
 
 list.files()
-# ADD LINE TO REMOVE OLD BERKOWITZ CSV
+cleanold <- "BerkowitzFeatures.csv"
+if (file.exists(cleanold)) file.remove(cleanold)
 berkowitzFeatures <- compute.features(melody.filenames = list.files(pattern=".csv"), 
                                      dir = ".",
                                      use.segmentation = FALSE, 

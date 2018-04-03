@@ -8,11 +8,7 @@ Everything you need here for the ICMPC paper and poster.
 * Program in all surveys needed
 * Begin outline for experimental protocol 
 * Get overleaf template and include link and bash line to open it
-* Change berkowitz spelling
-* Experiment line to see if they have done this melody before
-* add in R line script that removes current berkowitz before making new corpus
-* Packet with correct key signature
-* You will set up with chords changing at level of beat, then two bars for free
+* Packet with correct key signature, have heard before
 * Print draft paper for tomorrow
 * Pilot with Rory tomorrow 
 
@@ -36,9 +32,14 @@ Everything you need here for the ICMPC paper and poster.
 * 20 minute figured out how to string audio files together, began to build main loop; DB
 * 120 minute coded main loop 2018-03-15; DB
 * 240 minutes finished first draft, few things to spruce up Friday morning 2018-03-15; DB
+* 120 minutes clean code, make stimuli 2018-04-03; DB
 
 ## Stuff I said I would do then did
 
 * Migrate experimental draft to this repo
 * Figure out fancy way to have melodies loaded
 * Write section on melody selection
+* Experiment line to see if they have done this melody before
+* Change berkowitz spelling
+* add in R line script that removes current berkowitz before making new corpus
+* You will set up with chords changing at level of beat, then two bars for free

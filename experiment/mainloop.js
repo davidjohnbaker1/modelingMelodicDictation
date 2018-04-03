@@ -9,7 +9,7 @@ var mainaudio2 = {
 	    	type: 'audio-button-response',
    	     	stimulus: 'sound/mp3/fiveSecondSilence.wav',
 		choices: ['CLICK WHEN READY TO BEGIN'],
-		prompt: function(){ return "Please flip to the page with melody "+jsPsych.timelineVariable('melody', true); } 
+		prompt: function(){ return "EXPERIMENTER: Please turn to page with melody "+jsPsych.timelineVariable('melody', true); } 
       },
 
 // FIRST REP
@@ -167,9 +167,23 @@ var mainaudio2 = {
 		trial_ends_after_audio: true 
           },
 
-// Silence for Transcribing
+// Silence for Final Transcribing
 
         {
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 60 SECONDS TO DICTATE THE MELODY'
+          },
+	{
+	    	type: 'audio-button-response',
+   	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
+		choices: ['LISTEN'],
+		trial_ends_after_audio: true ,
+		prompt: 'USE THESE 40 SECONDS TO DICTATE THE MELODY'
+          },
+	{
 	    	type: 'audio-button-response',
    	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
 		choices: ['LISTEN'],
@@ -201,7 +215,7 @@ var mainaudio2 = {
 	    	type: 'audio-button-response',
    	     	stimulus: 'sound/mp3/twentySecondSilence.wav',
 		choices: ['CONTINUE'],
-		prompt: 'PLEASE GIVE YOUR DICTATION TO THE EXPERIMENTER, WHEN YOU ARE READY TO START THE NEXT MELODY PLEASE PRESS THE BUTTON ABOVE'
+		prompt: '<p>PLEASE GIVE YOUR DICTATION TO THE EXPERIMENTER AND INDICATE ON BOTTOM OF SHEET IF YOU HAVE HEARD THIS MELODY BEFORE</p><p>WHEN YOU ARE READY TO START THE NEXT MELODY PLEASE PRESS THE BUTTON ABOVE</p>'
           }
 
 
@@ -212,12 +226,10 @@ var mainaudio2 = {
 // ( eventually have it so set number of times of melody? //
 
     timeline_variables: [
-        { melody: 'sound/mp3/setupYankee.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupMary.mp3', prompt: '<p>TEMP</p>'},
-	{ melody: 'sound/mp3/setupDoremi.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupDeck.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupHappy.mp3', prompt: '<p>TEMP HOLDER</p>'},
-	{ melody: 'sound/mp3/setupJingle.mp3', prompt: '<p>TEMP HOLDER</p>'}
+        { melody: 'sound/E1MB9.mp3', prompt: '<p>TEMP HOLDER</p>'},
+	{ melody: 'sound/E1MB95.mp3', prompt: '<p>TEMP</p>'},
+	{ melody: 'sound/E1MB112.mp3', prompt: '<p>TEMP HOLDER</p>'},
+	{ melody: 'sound/E1MB34.mp3', prompt: '<p>TEMP HOLDER</p>'}
     ],
 	randomize_order : true
 
