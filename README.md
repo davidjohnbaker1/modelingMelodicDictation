@@ -3,6 +3,14 @@
 Repo for modeling dictation project.
 Everything you need here for the ICMPC paper and poster.
 
+### TEMP TO DO
+
+* RUN EXPERIMENT MAKING LIST OF MISSING AND PROTOCOL
+* CREATE DICTATION PACKET
+* PRINT DRAFT
+* MAKE DATA SLURPER
+* FULL RUN WEDNESDAY NIGHT
+
 ## Work Docket
 
 * Program in all surveys needed
