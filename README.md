@@ -6,7 +6,7 @@ Everything you need here for the ICMPC paper and poster.
 ## Work Docket
 
 * Program in all surveys needed
-* Begin outline for experimental protocol 
+* Match protocol and set up running and cleaning software
 * Get overleaf template and include link and bash line to open it
 * Packet with correct key signature, have heard before
 * Print draft paper for tomorrow
@@ -43,3 +43,4 @@ Everything you need here for the ICMPC paper and poster.
 * Change berkowitz spelling
 * add in R line script that removes current berkowitz before making new corpus
 * You will set up with chords changing at level of beat, then two bars for free
+* Begin outline for experimental protocol

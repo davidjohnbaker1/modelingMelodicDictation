@@ -93,6 +93,16 @@ var subject_id = prompt("Enter Participant Number");
 <script src="bais.js"></script>
 <script>
 
+var end={
+    type: 'instructions',
+    pages: ['The first portion of the experiment is now completed. Please call over the experimenter.',
+      'Remember to check the save location of the dowload and back it up!'],
+    show_clickable_nav: true
+  };
+
+timeline.push(end)
+
+
 // TELL THEM THEY NOW HAVE TO GO TO GOLDSMIHS!
 
 // SAVE FUNCTION
