@@ -42,6 +42,6 @@ var bucknellC={
 		],
   };
 
-timeline.push(bucknellC)
+//timeline.push(bucknellC)
 
 

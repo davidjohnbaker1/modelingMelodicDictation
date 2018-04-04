@@ -1,6 +1,6 @@
 var auralintro={
     type: 'instructions',
-    pages: ['The melodic dictation of this experiment is now over. Please press "Next" to continue. You will next answer some questions about your musical education',
+    pages: ['The melodic dictation of this experiment is now over. Please press "Next" to continue. You will next answer some questions about your musical education.',
       'Please answer the questions on the next few pages to the best of your ability.'],
     show_clickable_nav: true
   };
