@@ -2,6 +2,10 @@
 
 Follow these instructions and you will have a great experiment.
 
+## Preparation
+
+1. Place packet with multiple pencils in front of Mac
+2. Log into lab computer password 'Fxxxxxxxxxxxx'
 
 ## Melodic Dictation
 
