@@ -3,16 +3,6 @@
 Repo for modeling dictation project.
 Everything you need here for the ICMPC paper and poster.
 
-### TEMP TO DO
-
-* Add pointer in data folder for experiment
-
-* FUTURE EXPERIMENTS
-* RUN EXPERIMENT MAKING LIST OF MISSING AND PROTOCOL
-* MAKE DATA SLURPER
-* PDF MERGE WITH CONSENT
-* Modify start experiment script
-
 ## Work Docket
 
 * Match protocol and set up running and cleaning software
@@ -53,3 +43,5 @@ Everything you need here for the ICMPC paper and poster.
 * Program in all surveys needed
 * Print draft paper for tomorrow
 * Packet with correct key signature, have heard before
+* Add pointer in data folder for experiment
+* PDF MERGE WITH CONSENT

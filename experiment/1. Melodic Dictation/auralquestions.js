@@ -17,7 +17,9 @@ var aural_survey = {
 		{prompt: "Do you have absolute pitch?(also called perfect pitch)"},
 		{prompt: "What system of solfege do you use primarily?(Ex: Moveable DO, Fixed Do, La Based Minor, Numbers, No System)"},
 		{prompt: "How many weeks has it been since the last aural skills class you participated in? (As a student or teacher)"},
-		{prompt: "Please use the the space below to describe strategies you used to complete melodic dictations."}
+		{prompt: "Please use the the space below to describe strategies you used to complete melodic dictations."},
+		{prompt: "Would you like to participate in more experiments investigating aural skills?"},
+		{prompt: "If you answered YES to the question above, please provide your email here.?"}
 		],
 };
 
