@@ -3,6 +3,8 @@
 Repo for modeling dictation project.
 Everything you need here for the ICMPC paper and poster.
 
+* CHANGE GMSI LINK FOR EXTRA
+
 ## Work Docket
 
 * Match protocol and set up running and cleaning software
