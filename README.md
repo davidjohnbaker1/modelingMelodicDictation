@@ -5,6 +5,8 @@ Everything you need here for the ICMPC paper and poster.
 
 ### TEMP TO DO
 
+* Add pointer in data folder for experiment
+
 * FUTURE EXPERIMENTS
 * RUN EXPERIMENT MAKING LIST OF MISSING AND PROTOCOL
 * MAKE DATA SLURPER
